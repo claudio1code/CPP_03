@@ -6,39 +6,20 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 12:22:27 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/11 17:24:10 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/11 16:44:39 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
 int	main(void)
 {
-	std::cout << std::endl << "--- TESTES DE CONSTRUTORES ---" << std::endl;
-	ClapTrap clap1;
-	ClapTrap clap2("Player 01");
-	ClapTrap clap3(clap2);
-	ScavTrap scav1;
-	ScavTrap scav2("Player 02");
-	ScavTrap scav3(scav2);
-
-	std::cout << std::endl << "--- TESTES DE AÇÕES ---" << std::endl;
-	clap2.attack("Wall");
-	clap2.beRepaired(5);
-	clap2.takeDamage(3);
-	scav2.attack("Wall");
-	scav2.beRepaired(2);
-	scav2.takeDamage(4);
+	ClapTrap a("Player_01");
 	
-	std::cout << std::endl << "--- TESTES EXTREMOS: MORTE---" << std::endl;
-	clap1.takeDamage(20);
-	clap1.attack("PLAYER 03");
-	clap1.beRepaired(5);
-	scav1.takeDamage(20);
-	scav1.attack("PLAYER 04");
-	scav1.beRepaired(5);
-
-	std::cout << std::endl << "--- TESTANDO DESTRUTORES---" << std::endl;
+	a.attack("Player_02");
+	a.takeDamage(5);
+	a.beRepaired(1);
+	a.takeDamage(9);
+	a.beRepaired(1);
 	return 0;
 }

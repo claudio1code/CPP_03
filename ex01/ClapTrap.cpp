@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 09:18:10 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/11 16:54:39 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/11 17:29:35 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ClapTrap::beRepaired(unsigned int amount){
 		return ;
 	}
 	this->_energyPoints--;
-	this->_hitPoints = amount;
+	this->_hitPoints += amount;
 	std::cout << "ClapTrap " << this->_name << " repaired 1 hit point, hit points now is " << this->_hitPoints << std::endl; 
 }
 

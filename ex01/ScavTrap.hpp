@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 15:54:55 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/11 16:40:08 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/11 17:30:54 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ScavTrap : public ClapTrap{
 		ScavTrap(std::string name);
 		ScavTrap&	operator=(const ScavTrap& other);
 		void		attack(const std::string& target);
+		void 		guardGate();
 };
 
 #endif
