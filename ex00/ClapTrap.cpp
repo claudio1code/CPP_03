@@ -6,21 +6,21 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 09:18:10 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/11 15:47:18 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/11 18:14:47 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : _name("default"), _hitPoints(10), _energyPoints(10), _attackDemage(0) {
+ClapTrap::ClapTrap() : _name("default"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
 	std::cout << "ClapTrap Default Constructor Called for " << this->_name << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other) : _name(other._name), _hitPoints(other._hitPoints), _energyPoints(other._energyPoints), _attackDemage(other._attackDemage) {
+ClapTrap::ClapTrap(const ClapTrap& other) : _name(other._name), _hitPoints(other._hitPoints), _energyPoints(other._energyPoints), _attackDamage(other._attackDamage) {
 	std::cout << "ClapTrap Copy Constructor Called for " << this->_name << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDemage(0) {
+ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
 		std::cout << "ClapTrap Parametarized Constructor Called for " << this->_name << std::endl;
 }
 
@@ -30,7 +30,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& other){
 		this->_name = other._name;
 		this->_hitPoints = other._hitPoints;
 		this->_energyPoints = other._energyPoints;
-		this->_attackDemage = other._attackDemage;
+		this->_attackDamage = other._attackDamage;
 	}
 	return (*this);
 }
@@ -43,7 +43,7 @@ void	ClapTrap::attack(const std::string& target){
 	}
 	this->_energyPoints--;
 	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " 
-	<< this->_attackDemage << " points of damage!" << std::endl;
+	<< this->_attackDamage << " points of damage!" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount){
@@ -55,7 +55,7 @@ void	ClapTrap::takeDamage(unsigned int amount){
 		this->_hitPoints = 0;
 	else
 		this->_hitPoints -= amount;
-	std::cout << "ClapTrap " << this->_name << " takes " << amount <<  " points of demage" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " takes " << amount <<  " points of damage" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount){
@@ -66,7 +66,7 @@ void	ClapTrap::beRepaired(unsigned int amount){
 	}
 	this->_energyPoints--;
 	this->_hitPoints = amount;
-	std::cout << "ClapTrap " << this->_name << " repaired 1 hit point, hit points now is " << this->_hitPoints << std::endl; 
+	std::cout << "ClapTrap " << this->_name << " repaired " << amount << " hit point, hit points now is " << this->_hitPoints << std::endl; 
 }
 
 ClapTrap::~ClapTrap(){

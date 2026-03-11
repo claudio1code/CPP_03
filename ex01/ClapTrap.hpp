@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 16:39:43 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/11 16:15:52 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/11 17:46:27 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ class ClapTrap{
 		std::string		_name;
 		unsigned int	_hitPoints;
 		unsigned int	_energyPoints;
-		unsigned int	_attackDemage;
+		unsigned int	_attackDamage;
 		
 	public:
 	~ClapTrap();
 	ClapTrap();
 	ClapTrap(const ClapTrap& other);
-	ClapTrap(std::string name, unsigned int	_hitPoints, unsigned int _energyPoints, unsigned int _attackDemage);
+	ClapTrap(std::string name, unsigned int	_hitPoints, unsigned int _energyPoints, unsigned int _attackDamage);
 	ClapTrap(std::string name);
 	ClapTrap&	operator=(const ClapTrap& other);
 	void		attack(const std::string& target);

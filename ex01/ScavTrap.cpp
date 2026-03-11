@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 16:01:23 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/11 17:34:33 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/11 17:46:27 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void		ScavTrap::attack(const std::string& target) {
 	}
 	this->_energyPoints--;
 	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " 
-	<< this->_attackDemage << " points of damage!" << std::endl;
+	<< this->_attackDamage << " points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate() {

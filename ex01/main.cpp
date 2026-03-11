@@ -6,7 +6,7 @@
 /*   By: clados-s <clados-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 12:22:27 by clados-s          #+#    #+#             */
-/*   Updated: 2026/03/11 17:32:43 by clados-s         ###   ########.fr       */
+/*   Updated: 2026/03/11 17:45:27 by clados-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(void)
 	clap1.takeDamage(20);
 	clap1.attack("PLAYER 03");
 	clap1.beRepaired(5);
-	scav1.takeDamage(20);
+	scav1.takeDamage(100);
 	scav1.attack("PLAYER 04");
 	scav1.beRepaired(5);
 
